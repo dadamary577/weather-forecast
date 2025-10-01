@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app" role="application" aria-label="Weather forecast app">
+    <div class="left">
+      <div class="brand">
+        <div class="logo">W</div>
+        <div>
+          <h1>Weatherly</h1>
+          <p class="lead">Fast current weather & 5-day forecast</p>
+        </div>
+      </div>
+
+      <div>
+        <label for="city">City</label>
+        <div class="search" role="search">
+          <input id="city" placeholder="e.g. Lagos, New York, London" aria-label="City name" />
+          <button id="searchBtn" aria-label="Search weather">Search</button>
+        </div>
+      </div>
+
+      <div id="current" class="current-card" aria-live="polite" aria-atomic="true">
+        <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="" id="currentIcon"/>
+        <div class="current-details">
+          <p class="temp" id="currentTemp">— °C</p>
+          <p class="desc" id="currentDesc">No data</p>
+          <div class="meta" id="currentMeta">Enter a city and press Search</div>
+        </div>
+      </div>
+
+      <div class="info-row" id="extras"></div>
+
+      <div class="footer">
+        Tip: temperatures are shown in Celsius. Powered by OpenWeatherMap.
+      </div>
+    </div>
+
+    <div class="right">
+      <h2>5-day forecast</h2>
+      <div class="forecast-grid" id="forecast"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
